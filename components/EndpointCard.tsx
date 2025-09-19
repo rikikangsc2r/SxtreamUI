@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import type { Endpoint } from '../types';
 import ResponseDisplay from './ResponseDisplay';
@@ -103,13 +102,13 @@ const EndpointCard: React.FC<EndpointCardProps> = ({ endpoint }) => {
                 className="flex items-center justify-between cursor-pointer group"
                 onClick={() => setExpanded(!isExpanded)}
             >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">
                     <span className={`${methodClass} px-3 py-1 rounded-lg text-sm font-mono border`}>
                         {endpoint.method}
                     </span>
-                    <span className="font-medium text-lg">{endpoint.nama}</span>
+                    <span className="font-medium text-base sm:text-lg break-words">{endpoint.nama}</span>
                 </div>
-                <i className={`fas ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-gray-400 transition-transform group-hover:text-white`}></i>
+                <i className={`fas ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-gray-400 transition-transform group-hover:text-white ml-4`}></i>
             </div>
 
             {isExpanded && (
@@ -165,8 +164,8 @@ const EndpointCard: React.FC<EndpointCardProps> = ({ endpoint }) => {
                         <code className="text-sm text-emerald-400 break-all block bg-gray-800/50 p-3 rounded overflow-x-auto max-w-full custom-scrollbar">{urlPreview}</code>
                     </div>
 
-                    <div className="flex items-center justify-between">
-                        <button onClick={handleExecute} disabled={isLoading} className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-6 py-3 rounded-lg flex items-center gap-3 transition shadow-lg hover:shadow-emerald-500/25 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <button onClick={handleExecute} disabled={isLoading} className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-6 py-3 rounded-lg flex items-center justify-center gap-3 transition shadow-lg hover:shadow-emerald-500/25 disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto">
                             {isLoading ? (
                                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full loading-spinner"></div>
                             ) : (
@@ -189,4 +188,3 @@ const EndpointCard: React.FC<EndpointCardProps> = ({ endpoint }) => {
 };
 
 export default EndpointCard;
-

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import type { Endpoint } from '../types';
 import EndpointCard from './EndpointCard';
@@ -33,14 +32,14 @@ const EndpointCategory: React.FC<EndpointCategoryProps> = ({ category, endpoints
                 className="category-header flex items-center justify-between p-4 cursor-pointer hover:bg-gray-700/30 transition group"
                 onClick={() => setExpanded(!isExpanded)}
             >
-                <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="flex items-center gap-3 flex-grow min-w-0">
+                    <div className="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
                         <i className={categoryIcon}></i>
                     </div>
-                    <span className="font-semibold text-lg">{category}</span>
-                    <span className="bg-gray-700/50 text-gray-400 text-xs px-2 py-1 rounded-full">{endpoints.length}</span>
+                    <span className="font-semibold text-base sm:text-lg break-words">{category}</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 ml-4 flex-shrink-0">
+                    <span className="bg-gray-700/50 text-gray-400 text-xs px-2 py-1 rounded-full">{endpoints.length}</span>
                     <i className={`fas ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-gray-400 transition-transform`}></i>
                 </div>
             </div>

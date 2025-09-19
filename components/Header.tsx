@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 
 interface HeaderProps {
@@ -39,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
                     <div className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-lg flex items-center justify-center">
                         <i className="fas fa-code text-sm text-white"></i>
                     </div>
-                    <h1 className="text-xl font-semibold bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+                    <h1 className="hidden sm:block text-xl font-semibold bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
                         API Playground
                     </h1>
                 </div>

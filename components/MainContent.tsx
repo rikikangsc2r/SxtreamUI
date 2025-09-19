@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import type { Endpoint, GroupedEndpoints } from '../types';
 import Stats from './Stats';
@@ -67,10 +66,10 @@ const MainContent: React.FC = () => {
                         <i className="fas fa-bolt mr-2"></i>SXTREAM API PLAYGROUND
                     </div>
                 </div>
-                <h2 className="text-3xl font-bold mb-4">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">
                     Test & Integrate <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">API Endpoints</span>
                 </h2>
-                <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
                     Powerful API testing interface with real-time results and comprehensive documentation
                 </p>
             </div>
@@ -85,8 +84,8 @@ const MainContent: React.FC = () => {
                         placeholder="Search endpoints... (Ctrl+K)"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full glass-effect border border-gray-600/50 rounded-xl px-6 py-4 pl-12 focus:outline-none focus:border-emerald-400 transition text-lg" />
-                    <i className="fas fa-search absolute left-4 top-5 text-gray-400"></i>
+                        className="w-full glass-effect border border-gray-600/50 rounded-xl px-4 py-3 pl-10 focus:outline-none focus:border-emerald-400 transition text-base sm:text-lg" />
+                    <i className="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
                 </div>
             </div>
 
