@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import type { StatsData } from '../types';
 
@@ -15,7 +14,7 @@ const StatCard: React.FC<StatCardProps> = ({ iconClass, iconBgClass, value, labe
         <div className={`w-12 h-12 ${iconBgClass} rounded-lg flex items-center justify-center mx-auto mb-3`}>
             <i className={`${iconClass} text-xl`}></i>
         </div>
-        <div className={`${valueColorClass} text-2xl font-bold`}>{value}</div>
+        <div className={`${valueColorClass} text-2xl font-bold break-all`}>{value}</div>
         <div className="text-gray-400 text-sm">{label}</div>
     </div>
 );
