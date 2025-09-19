@@ -1,0 +1,5 @@
+{
+  "name": "SXTREAM API Playground",
+  "description": "A React-based API playground to test and integrate SXTREAM API endpoints directly in your browser with real-time results, rebuilt for a modern, component-based architecture.",
+  "requestFramePermissions": []
+}

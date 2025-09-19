@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SXTREAM API Playground</title>
+  <meta name="description" content="Test and integrate our API endpoints directly in your browser with real-time results." />
+  <meta name="keywords" content="RestAPI, React, Tailwind, SXTREAM" />
+  <meta name="author" content="SXTREAM" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="API SXTREAM - Explore the Power of Our API" />
+  <meta property="og:description" content="Test and integrate our API endpoints directly in your browser with real-time results" />
+  <meta property="og:image" content="https://i.imgur.com/giAV3We.jpeg" />
+  <meta property="og:url" content="https://api.sxtream.xyz/" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SXTREAM - Explore the Power of Our API" />
+  <meta name="twitter:description" content="Test and integrate our API endpoints directly in your browser with real-time results" />
+  <meta name="twitter:image" content="https://i.imgur.com/giAV3We.jpeg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    }
+    .glass-effect {
+      background: rgba(30, 41, 59, 0.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .loading-spinner {
+      animation: spin 0.6s linear infinite;
+    }
+    /* JSON syntax highlighting */
+    .json-key { color: #60a5fa; }
+    .json-string { color: #34d399; }
+    .json-number { color: #fbbf24; }
+    .json-boolean { color: #f87171; }
+    .json-null { color: #9ca3af; }
+
+    /* Custom scrollbar */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #1e293b;
+      border-radius: 3px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #10b981;
+      border-radius: 3px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #059669;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+<body class="text-white min-h-screen">
+  <div id="root"></div>
+</body>
+</html>
