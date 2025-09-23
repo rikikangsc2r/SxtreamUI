@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import type { StatsData } from '../types';
 
@@ -27,7 +28,7 @@ const Stats: React.FC = () => {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const res = await fetch('/data/api');
+                const res = await fetch('https://api.sxtream.xyz/data/api');
                 if (res.ok) {
                     const data = await res.json();
                     setStats(data);
